@@ -56,6 +56,9 @@ defmodule YouLiftWeb.Router do
       live "/users/log_in", UserLoginLive, :new
       live "/users/reset_password", UserForgotPasswordLive, :new
       live "/users/reset_password/:token", UserResetPasswordLive, :edit
+      live "/terms", TermsLive, :new
+      live "/privacy", PrivacyLive, :new
+      live "/about", AboutLive, :new
     end
 
     post "/users/log_in", UserSessionController, :create
