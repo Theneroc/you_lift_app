@@ -62,8 +62,12 @@
     }
 }
 
+body {
+    font-family: "Antic";
+}
+
 .heading-1 {
-    animation: slideInLeft 0.5s ease-in 0.5s;
+    animation: slideInLeft 0.25s ease-in;
     /* animation-name: slideInLeft;
     animation-duration: .5s;
     animation-timing-function: ease-in;
@@ -71,10 +75,6 @@
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: normal; */
-}
-
-.heading-2 {
-    animation: slideInTop 0.5s ease-in 0.5s;
 }
 
 @keyframes slideInRight {
@@ -87,5 +87,182 @@
 }
 
 .heading-3 {
-    animation: slideInRight 0.5s ease-in 0.5s;
+    animation: slideInRight 0.25s ease-in;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #191715;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header-logo {
+    width: 200px;
+}
+
+.search-input {
+    height: 28px;
+    width: 400px;
+    border: none;
+    border-radius: 13px 0 0 13px;
+    color: white;
+    background-color: #403A34;
+}
+
+.search-icon {
+    display: inline;
+    width: 20px;
+    filter: invert(100%);
+}
+
+.search-button { /*search button*/
+    border-left: 2px solid #191715;
+    background-color: #403A34;
+    right: 0;
+    top: 0;
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    border-radius: 0 50px 50px 0;
+}
+
+.hamburger-button {
+    padding-left: 169px;
+}
+
+header div {
+    width: 400px;
+}
+
+@media screen and (width <= 800px){
+    main {
+        margin: 0;
+        max-height: fit-content;
+        margin-bottom: 16px;
+    }
+
+    .title-and-sign {
+        position: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+
+   .hey {
+    font-size: 32px;
+   }
+   .hey-and-title {
+    margin-left: 16px;
+   }
+
+  .signup {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+
+  .heading-3 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .signupb {
+    margin: 12px 16px;
+    font-size: 16px;
+  }
+
+  .question {
+    font-size: 16px;
+  }
+
+.footer {
+    margin: 0 8px;
+    margin-top: 200px;
+    padding: 0;
+}
+
+  .motto {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+
+  .copy-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 32px;
+    object-fit: contain;
+  }
+
+  .copyright {
+    font-size: 10px;
+    margin: 0;
+    margin-left: 4px;
+    display: inline-block;
+  }
+
+  .links {
+    font-size: 10px;
+    margin: 0;
+    width: 140px;
+  }
+
+   
+}
+
+@media screen and (width <= 1024px){
+    img {
+        width: 80%;
+    }
+
+    .title-and-sign {
+        justify-content: center;
+    }
+
+    .title {
+        margin-right: 0;
+    }
+
+   .hey {
+    font-size: 32px;
+   }
+   .hey-and-title {
+    margin-left: 16px;
+   }
+
+  .signup {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+
+  .heading-3 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .signupb {
+    margin: 12px 16px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (1024px <= width <= 2560px){
+    main {
+        padding-top: 40px;
+    }
+    .motto {
+        margin-top: 200px;
+    }
+
+    .footer {
+        margin-top: 12%;
+    }
+ }

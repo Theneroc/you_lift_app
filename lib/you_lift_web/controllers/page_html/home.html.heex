@@ -1,47 +1,46 @@
-<div class="flex justify-center">
-  <div class="">
-    <div class="">
-      <pre class="fadein font-brand1 text-6xl text-kgold">Hey,</pre>
-    </div>
+<%= if !@current_user do %>
+<div class="title-and-sign flex justify-center">
+  <div class="hey-and-title flex flex-col ml-16">
+    <pre class="hey fadein font-brand1 text-6xl text-kgold">Hey,</pre>
     <a href={~p"/"}>
-    <div class="flex relative">
-    <script>
-      const delay = 1000;
+      <div class="title flex relative justify-center">
+        <script>
+          const delay = 0;
 
-      function changeOpacity() {
-        setTimeout(function() {
-          const you = document.getElementById("you");
-          const lift = document.getElementById("lift?");
-          you.style.opacity = 1;
-          lift.style.opacity = 1;
-        }, delay)
+          function changeOpacity() {
+            setTimeout(function() {
+              const you = document.getElementById("you");
+              you.style.opacity = 1;
+              lift.style.opacity = 1;
+            }, delay)
 
-        setTimeout(function() {
-          const rest = document.getElementById("rest");
-          rest.style.opacity = 1;
-        }, delay + 200) 
-      }
+            setTimeout(function() {
+              const rest = document.getElementById("rest");
+              rest.style.opacity = 1;
+            }, delay) 
+          }
 
-      changeOpacity();
-    </script>
-      <div id="you" class="heading-1 flex-1 relative" style="opacity: 0;">
-        <p class="absolute top-4 font-brand1 font-bold text-9xl text-white"alt="">Y</p>
-        <p class="absolute font-brand1 font-bold text-9xl text-white top-5 right-[-8px]"alt="">u</p>
-        <img class="sisyphus min-w-[204px] h-48 ml-20 mt-12" src="/images/sisyphus.png" alt="">
-      </div>
-      <div id="lift?" class="heading-2 flex-1 flex ml-12 mt-4 font-brand1 font-bold text-9xl " style="opacity: 0;">
-        <p class="text-kbrown">lift</p>
-        <p class="text-kgold">?</p>
+          changeOpacity();
+        </script>
+        <img class="you heading-1" src="/images/YouLift-alternate-logo.svg" alt="">
+        <%!-- <div id="you" class="heading-1 relative text-9xl" style="opacity: 0;">
+          <p class="y absolute top-4 font-brand1 font-bold text-white"alt="">Y</p>
+          <p class="u absolute font-brand1 font-bold text-white top-5 right-[2%]"alt="">u</p>
+          <img class="sisyphus min-w-[204px] h-48 ml-20 mt-12" src="/images/sisyphus.png" alt="">
         </div>
-    </div>    
+        <div id="lift?" class="lift heading-2 flex ml-12 mt-4 font-brand1 font-bold text-9xl " style="opacity: 0;">
+          <p class="text-kbrown">lift</p>
+          <p class="text-kgold">?</p>
+        </div> --%>
+      </div>    
     </a>
   </div>
   <div id="rest" class="heading-3 flex ml-32 mr-20 flex-col text-center" style="opacity: 0;">
-    <p class="text-white font-brand1 font-bold text-5xl">Sign up 
+    <p class="signup text-white font-brand1 font-bold text-5xl">Sign up 
     <span class="text-kgold">now</span><span class="text-kbrown">!</span></p>
     <p class="mt-4 text-white">(It's free)</p>
     <.link 
-    class="signup rounded-sm bg-kbrown-light mx-16 mt-4 py-3 font-brand2 text-white"
+    class="signupb rounded-sm bg-kbrown-light mx-16 mt-4 py-3 font-brand2 text-white"
     href={~p"/users/register"}
     method="get"
     role="menuitem"
@@ -51,9 +50,9 @@
       Sign up
     </.link>
     <div class="rest mt-4 flex flex-col text-center ">
-      <p class="text-white font-brand2 mt-8">Already have an account?</p>
+      <p class="question text-white font-brand2 mt-8">Already have an account?</p>
       <.link 
-        class="signup rounded-sm bg-kgold-dark mx-16 mt-4 py-3 font-brand2 text-white"
+        class="signupb rounded-sm bg-kgold-dark mx-16 mt-4 py-3 font-brand2 text-white"
         href={~p"/users/log_in"}
         method="get"
         role="menuitem"
@@ -65,6 +64,9 @@
     </div>
   </div>
 </div>
-<p id="motto" class="fadein2 font-brand2 italic text-white text-center mt-44">
+<p id="motto" class="motto fadein2 font-brand2 italic text-white text-center">
   share your lifting progress with friends
 </p>
+<% else %>
+
+<% end %>
